@@ -1,6 +1,6 @@
 # Diet Planner
 
-## Virtual Environement setup:
+## Virtual Environement setup (Recommended):
   1. __Install virtualenv module__ :
      ```
      pip install virtualenv
