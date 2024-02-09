@@ -11,7 +11,7 @@
      ```
      .\venv\Scripts\activate
   7. __Deactivate virtual environment__ :
-  8. ```
+   ```
      deactivate
 ## To Install All The Python Packages:
   1. ```
