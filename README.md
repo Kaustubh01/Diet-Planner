@@ -12,7 +12,8 @@
      .\venv\Scripts\activate
   7. __Deactivate virtual environment__ :
    ```
-     deactivate
+ deactivate
+  ```
 ## To Install All The Python Packages:
   1. ```
      pip install -r requirements.txt
