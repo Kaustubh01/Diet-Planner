@@ -1,7 +1,78 @@
-<nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: #fffefe;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            font-family: sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            color: #616161;
+            margin: 0px 20px;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .button{
+            background-color: transparent;
+            border: 0px ;
+            border-radius: 8px;
+            padding: 2px 5px;
+        }
+        .button :hover{
+          border: 2px solid  #ea8930;
+          border-radius: 8px;
+          color: #616161 !important;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        .navbar a:hover {
+           
+            color: #ea8930;
+        }
+
+       
+
+        /* Responsive layout - adjust the navbar to smaller screens */
+
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div style="display: flex; align-items: center;">
+        <a href="#" style="width: 200px; height: 57px;"><img src="../images/Navbar.png" alt=""></a>
+        <a href="#">Home</a>
+        <a href="./dashboard.html">BMI Calculator</a>
+        <a href="#">Balanced Diet</a>
+        </div>
+        <div>
+        <button class="button" ><a class="login" href="./login.html">Login</a></button>
+        <button class="button"><a class="signup" href="./signup.html">Sign Up</a></button>
+        </div>
+    </div>
+
+    <!-- Add your page content here -->
+
+</body>
+
+</html>

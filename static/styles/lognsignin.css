@@ -1,0 +1,44 @@
+.logincontent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    margin-top: 200px;
+    
+}
+.signupcontent{
+    display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 130px;
+}
+.loginform{
+    display: flex;
+    flex-direction: column;
+    width: 439px;
+    height: 430px;
+ 
+}
+.signupform{
+    display: flex;
+    flex-direction: column;
+    width: 439px;
+    height: 650px;
+}
+.logsubmit{
+    margin-top: 40px;
+    padding: 15px 188px 15px 188px;
+    background-color: #EA8930;
+    border: 0;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+}
+input[type=email],[type=password],[type=text],[type=number]{
+    padding: 13px 15px 13px 15px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #E0E0E0;
+    border-style: solid;
+}
