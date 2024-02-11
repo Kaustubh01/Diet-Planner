@@ -1,0 +1,109 @@
+.BMIcontent{
+    
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center
+
+}
+.form{
+    width: 400px ;
+    height: 633px;
+    border-radius: 50px;
+    border:  2px solid #EE9748;
+    display: flex;
+    flex-direction: column;
+    padding: 55px 69px 55px 69px;
+    margin: 30px;
+}
+.result{
+        width: 400px;
+        align-items: center;
+        height: 633px;
+        border-radius: 50px;
+        background-color: #F0E1D2 ;
+        border: 2px solid #EE9748;
+        display: flex;
+        flex-direction: column;
+        padding: 55px 69px 55px 69px;
+        font-family: sans-serif;
+}
+input[type=number] {
+    margin-top: 8px;
+    padding: 13px 15px 13px 15px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #E0E0E0;
+    border-style: solid;
+}
+.gender{
+    display: flex;
+    flex-direction: row;
+}
+.gender button{
+    margin: 5px;
+    width: 150px;
+    height: 45px;
+    border: 2px solid #E0E0E0;
+    border-radius: 10px;
+    color:#525151;
+    background-color: transparent;
+}
+.gender button:hover{
+    border: 2px solid #EA8930;
+    background-color: #EE9748;
+    color: white;
+}
+.calculate{
+        margin-top: 40px;
+        text-align: center;
+        padding: 15px 100px 15px 100px;
+        background-color: #EA8930;
+        border: 0;
+        font-size: 20px;
+        color: white;
+        border-radius: 10px;
+}
+.record{
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    border: 2px solid #EE9748;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+.values{
+    margin: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.data{
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    margin: 10px 5px;
+}
+.recordlabels{
+    color: #716D6D;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.BMIcount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 199px;
+    height: 200px;
+    background-color: #EA8930;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        #EE9748 0px 0px 20px 12px;
+    margin: 40px 0px;
+}
