@@ -73,14 +73,14 @@
             >Don’t have an account?</span
           >
           <span >
-            <a href="./signup.html" style="text-decoration: none;color: #ea8930; font-size: 20px">
+            <a href="{{ url_for('login.signup') }}" style="text-decoration: none;color: #ea8930; font-size: 20px">
             Sign Up
             </a>
         </span>
         </p>
       </div>
       <div class="img">
-        <img src="../images/login.png" alt="">
+        <img src="{{ url_for('static', filename='/images/login.png') }}" alt="">
       </div>
     </div>
   </body>

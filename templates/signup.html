@@ -93,7 +93,7 @@
           >
           <span>
             <a
-              href="./login.html"
+              href="{{ url_for('login.login') }}"
               style="text-decoration: none; color: #ea8930; font-size: 20px"
             >
               Login
@@ -102,7 +102,7 @@
         </p>
       </div>
       <div class="img">
-        <img src="../images/signup.png" alt="" />
+        <img src="{{ url_for('static', filename= '/images/signup.png') }}" alt="" />
       </div>
     </div>
   </body>
