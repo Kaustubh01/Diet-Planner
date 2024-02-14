@@ -28,6 +28,6 @@ def signup():
     
     insert_user(name, mobile, email, password)
 
-    redirect(url_for('dashboard'))
+    redirect(url_for('dashboard.dashboard'))
 
     return render_template('signup.html')
