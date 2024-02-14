@@ -42,3 +42,9 @@ input[type=email],[type=password],[type=text],[type=number]{
     border-color: #E0E0E0;
     border-style: solid;
 }
+
+
+.signupcontent .img img, .logincontent .img img{
+    height: auto;
+    width: 500px;
+}

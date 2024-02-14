@@ -47,6 +47,9 @@
       
       .navbar a:hover {
         color: #ea8930;
+        font-size: 23px;
+        font-weight:410;
+        transition: 0.6s ease;
       }
 
       /* Responsive layout - adjust the navbar to smaller screens */
@@ -56,11 +59,11 @@
   <body>
     <div class="navbar">
       <div style="display: flex; align-items: center">
-        <a href="#" style="width: 200px; height: 57px"
+        <a href="{{ url_for('hello') }}" style="width: 200px; height: 57px"
           ><img src="static\images\Navbar.png" alt="Logo"
         /></a>
-        <a href="#">Home</a>
-        <a href="./dashboard.html">BMI Calculator</a>
+        <a href="{{ url_for('hello') }}">Home</a>
+        <a href="{{ url_for('bmi') }}">BMI Calculator</a>
         <a href="#">Balanced Diet</a>
       </div>
       <div>

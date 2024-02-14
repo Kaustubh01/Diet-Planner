@@ -1,3 +1,29 @@
-p{
-    color: green;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
+
+.carousel {
+    display:block;
+    overflow: hidden;
+    height: 70vh;
+    width: 100%;
+    /* background-color: antiquewhite; */
+    align-items: center;
+    margin: auto;
+}
+
+.carousel .container{
+    margin: auto;
+    /* width: 98%; */
+}
+
+.carousel .container img {
+    width: auto;
+    height: 500px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* img:hover {
+    transform: scale(1.2);
+} */

@@ -106,5 +106,22 @@
         <img src="{{ url_for('static', filename= '/images/signup.png') }}" alt="" />
       </div>
     </div>
+
+
+    <script>
+      function validateForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var mobile = document.getElementById('mobile').value;
+        var password = document.getElementById('password').value;
+  
+        if (name === '' || email === ''|| mobile === ''|| password === '') {
+          alert('Please fill in all the fields');
+          return false;
+        }
+  
+        return true;
+      }
+    </script>
   </body>
 </html>

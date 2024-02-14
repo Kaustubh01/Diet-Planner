@@ -14,7 +14,12 @@ app.register_blueprint(dashboard_blueprint)
 
 @app.route('/')
 def hello():
-    return render_template('index.html')
+    images = ['image1.jpg', 'image2.jpg', 'image3.jpg']
+    return render_template('index.html', images = images)
+
+@app.route('/bmi')
+def bmi():
+    return render_template('bmi.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

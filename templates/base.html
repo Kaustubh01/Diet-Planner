@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/base.css') }}">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/bmi.css') }}">
 
     <title>{% block title %}My Flask App{% endblock %}</title>
 </head>
 <body>
     {% include 'nav.html' %}
 
-    <header>
-        <h1>{% block header %} Landing Page {% endblock %}</h1>
-    </header>
 
     <main>
         {% block content %}{% endblock %}
