@@ -10,7 +10,7 @@
   <body>
     {% include 'nav.html' %}
     <div class="signupcontent">
-      <form action="{{ url_for('login.signup') }}" method="POST" class="signupform">
+      <form action="{{ url_for('login.signup_form') }}" method="POST" class="signupform">
         <h1
           style="
             text-align: center;
@@ -75,6 +75,25 @@
           id="password"
           name="password"
           placeholder="Password#123"
+          required
+        />
+
+                <label
+          for="password"
+          style="
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            font-family: sans-serif;
+            margin-top: 30px;
+          "
+          >Password:</label
+        >
+        <input
+          type="password"
+          id="confirm-password"
+          name="confirm-password"
+          placeholder="Confirm Password"
           required
         />
 

@@ -8,3 +8,6 @@ venv/
 .vscode/
 
 config.py
+
+.ipynb_checkpoints/
+

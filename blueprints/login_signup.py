@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, request, redirect, url_for, session
 from database.database import *
 
-login_blueprint = Blueprint('login',__name__)
+login_blueprint = Blueprint('login', __name__)
 
-@login_blueprint.route('/login',methods=['GET', 'POST'])
+@login_blueprint.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         email = request.form['email']
@@ -19,15 +19,30 @@ def login():
             return 'Invalid username or password.'
     return render_template('login.html')
 
-@login_blueprint.route('/signup' , methods = ['POST','GET'])
+@login_blueprint.route('/signup')
 def signup():
-    name = request.form.get('name')
-    mobile = request.form.get('mobile')
-    email = request.form.get('email')
-    password = request.form.get('password')
-    
-    insert_user(name, mobile, email, password)
-
-    redirect(url_for('dashboard.dashboard'))
-
     return render_template('signup.html')
+
+@login_blueprint.route('/signup-form', methods=['GET', 'POST'])
+def signup_form():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        confirm_password = request.form['confirm-password']
+        username = request.form['name']
+        phone = request.form['mobile']
+
+        if password != confirm_password:
+            return 'Password and Confirm Password do not match.'
+
+        existing_user = get_user(email)
+        if existing_user:
+            return 'Email address is already registered.'
+
+        # Create a new user
+        insert_user(username = username, mobile=phone,email= email, password= password)
+
+        # Redirect to login page after successful signup
+        return redirect(url_for('login.login'))
+
+    return render_template('signup-form.html')
