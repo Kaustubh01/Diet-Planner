@@ -25,6 +25,7 @@ body {
  line-height: 60px;
  text-align: center;
  width: 60%;
+ height: max-content;
 }
 /* calculatorpart */
 .bmicalculator{
@@ -69,7 +70,7 @@ width: 655px;
     margin-top: 50px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    
     justify-content: space-evenly;
 }
 .diet button{
@@ -114,7 +115,7 @@ width: 655px;
 }
 /* workout */
 .workout{
-    display: flex;
+         display: flex;
         flex-direction: column;
         align-items: center;
 }
@@ -134,12 +135,12 @@ width: 655px;
     color: white;
 }
 .workoutimages {
-    margin-bottom: 20px;
+margin-bottom: 20px;
     margin-top: 50px;
     display: flex;
-    width: 100%;
     flex-direction: row;
-    align-items: center;
+
+    justify-content: space-evenly;
     
 }
 .workoutline {
