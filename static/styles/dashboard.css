@@ -1,6 +1,6 @@
 .BMIcontent{
     
-    margin-top: 150px;
+    margin-top: 50px;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -9,7 +9,7 @@
 }
 .form{
     width: 400px ;
-    height: 633px;
+    height: auto;
     border-radius: 50px;
     border:  2px solid #EE9748;
     display: flex;
@@ -29,7 +29,7 @@
         padding: 55px 69px 55px 69px;
         font-family: sans-serif;
 }
-input[type=number] {
+input[type=number],select {
     margin-top: 8px;
     padding: 13px 15px 13px 15px;
     border-radius: 10px;
@@ -40,21 +40,14 @@ input[type=number] {
 .gender{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
 }
-.gender button{
-    margin: 5px;
-    width: 150px;
-    height: 45px;
-    border: 2px solid #E0E0E0;
-    border-radius: 10px;
-    color:#525151;
-    background-color: transparent;
+input[type=radio]:checked{
+    background-color: #EA8930;
+    
 }
-.gender button:hover{
-    border: 2px solid #EA8930;
-    background-color: #EE9748;
-    color: white;
-}
+
 .calculate{
         margin-top: 40px;
         text-align: center;

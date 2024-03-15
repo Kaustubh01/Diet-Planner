@@ -6,9 +6,15 @@
     <link rel="stylesheet" href="../static/styles/dashboard.css" />
     <title>BMI Caluculator</title>
   </head>
+
   <body>
+    {% include 'nav.html' %}
     <div class="BMIcontent">
-      <form action="{{ url_for('dashboard.dashboard') }}" method="POST" class="form">
+      <form
+        action="{{ url_for('dashboard.dashboard') }}"
+        method="POST"
+        class="form"
+      >
         <h1
           style="
             text-align: center;
@@ -52,23 +58,40 @@
           >Gender</label
         >
         <div class="gender" id="gender">
-    <label for="male">Male</label>
-    <input type="radio" id="male" name="gender" value="male" required>
-
-    <label for="female">Female</label>
-    <input type="radio" id="female" name="gender" value="female" required>
-
+          <div>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male" required />
+          </div>
+          <div>
+            <label for="female">Female</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              required
+            />
+          </div>
         </div>
 
-          <label for="activity_level">Activity Level:</label>
-    <select name="activity_level" id="activity_level" required>
-        <option value="sedentary">Sedentary</option>
-        <option value="lightly_active">Lightly Active</option>
-        <option value="moderately_active">Moderately Active</option>
-        <option value="very_active">Very Active</option>
-        <option value="extra_active">Extra Active</option>
-    </select>
-
+        <label
+          for="activity_level"
+          style="
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            font-family: sans-serif;
+            margin-top: 30px;
+          "
+          >Activity Level:</label
+        >
+        <select name="activity_level" id="activity_level" required>
+          <option value="sedentary">Sedentary</option>
+          <option value="lightly_active">Lightly Active</option>
+          <option value="moderately_active">Moderately Active</option>
+          <option value="very_active">Very Active</option>
+          <option value="extra_active">Extra Active</option>
+        </select>
 
         <label
           for="weight"
@@ -106,7 +129,8 @@
           placeholder="Height in CM"
           required
         />
-        <input type="submit" class="calculate">Calculate</input>
+        <button type="submit" class="calculate">Calculate</button>
       </form>
+    </div>
   </body>
 </html>

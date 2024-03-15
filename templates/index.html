@@ -1,14 +1,184 @@
-{% extends 'base.html' %}
-
-{% block header %}{% endblock %}
-
-{% block content %}
-<div class="carousel">
-    <div class="container">
-    {% for image in images %}
-        <img src="{{ url_for('static', filename='images/' + image) }}" alt="Image">
-        
-    {% endfor %}
+{% extends 'base.html' %} {% block header %}{% endblock %} {% block content %}
+<div class="container">
+  <div class="hero">
+    <div class="head">
+      <div class="headline">
+        <p>
+          Achieve Your Health Goals with
+          <span style="color: #ea8930"> FoodFit</span> - Your Personal
+          <span style="color: #ea8930"> Diet Planner </span>
+        </p>
+      </div>
+      <div style="font-size: 24px">
+        Take control of your diet and live a healthier life with FoodFit.
+      </div>
     </div>
+    <div>
+      <img
+        src="{{ url_for('static', filename='/images/mainimg.png') }}"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="bmicalculator">
+    <div class="sideA">
+      <div class="maintext">
+        <h1>
+          Assess Your Health with Our
+          <span style="color: #ea8930">BMI Calculator</span>
+        </h1>
+        <p>
+          Easily determine your body mass index and track your progress towards
+          a healthier lifestyle.
+        </p>
+      </div>
+      <div class="subtext">
+        <div>
+          <h2>Why BMI ?</h2>
+          <p>
+            Our BMI calculator helps you understand if your weight is within a
+            healthy range.
+          </p>
+        </div>
+        <div>
+          <h2>Stay Informed</h2>
+          <p>
+            Access a curated list of articles and videos to support your health
+            journey.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img src="{{ url_for('static', filename='/images/girl.png') }}" alt="" />
+    </div>
+  </div>
+  <div class="diet">
+    <div class="head">
+      <div class="dietline">
+        <p>
+          Exploring Optimal
+          <span style="color: #ea8930"> Diet Plans</span>
+        </p>
+      </div>
+      <div style="font-size: 24px">
+        Stay healthy with our informative blog posts.
+      </div>
+    </div>
+    <div class="images">
+      <div style="width: 27%">
+        <img
+          src="{{ url_for('static', filename='/images/diet1.png') }}"
+          alt=""
+        />
+        <h3>Delicious and Healthy Meal Ideas</h3>
+        <p>Get inspired with our collection of nutritious and tasty recipes.</p>
+      </div>
+      <div style="width: 27%">
+        <img
+          src="{{ url_for('static', filename='/images/diet2.png') }}"
+          alt=""
+        />
+        <h3>The Importance of Regular Exercise</h3>
+        <p>
+          Discover how exercise can improve your physical and mental well-being.
+        </p>
+      </div>
+      <div style="width: 27%">
+        <img
+          src="{{ url_for('static', filename='/images/diet3.png') }}"
+          alt=""
+        />
+        <h3>The Benefits of a Balanced Diet</h3>
+        <p>
+          Learn how a balanced diet can improve your overall health and
+          well-being.
+        </p>
+      </div>
+    </div>
+    <button>View all</button>
+  </div>
+  <div class="goal">
+    <div>
+      <img
+        src="{{ url_for('static', filename='/images/goalgirl.png') }}"
+        alt=""
+      />
+    </div>
+    <div class="sideB">
+      <div class="maintext">
+        <h1>
+          Achieve Your
+          <span style="color: #ea8930">Health Goals</span>
+          with FoodFit
+        </h1>
+        <p>
+          FoodFit offers personalized diet plans tailored to your specific needs
+          and goals. Whether you're looking to lose weight, gain muscle, or
+          improve your overall health, our expertly crafted plans will help you
+          achieve success.
+        </p>
+      </div>
+      <div class="buttons">
+        <button style="background-color: #ea8930; color: white">Explore</button>
+        <button class="learn">Learn More ></button>
+      </div>
+    </div>
+  </div>
+  <div class="workout">
+    <div class="workhead">
+      <div class="workoutline">
+        <p>
+          Discover the Best
+          <span style="color: #ea8930">Workouts</span>
+        </p>
+      </div>
+      <div style="font-size: 24px; text-align: left">
+        Get Fit with These YouTube Videos
+      </div>
+    </div>
+    <div class="workoutimages">
+      <div>
+        <img
+          src="{{ url_for('static', filename='/images/diet1.png') }}"
+          alt=""
+        />
+        <h3>10 Tips for a Healthier Lifestyle</h3>
+        <p>Learn how to improve your overall well-being.</p>
+        <a href="#">Visit ↗ </a>
+      </div>
+      <div>
+        <img
+          src="{{ url_for('static', filename='/images/diet2.png') }}"
+          alt=""
+        />
+        <h3>The Benefits of a Balanced Diet</h3>
+        <p>Discover how a balanced diet can improve health.</p>
+        <a href="#">Visit ↗ </a>
+      </div>
+      <div>
+        <img
+          src="{{ url_for('static', filename='/images/diet3.png') }}"
+          alt=""
+        />
+        <h3>The Importance of Physical Activity</h3>
+        <p>Learn how exercise can benefit body and mind.</p>
+        <a href="#">Visit ↗ </a>
+      </div>
+    </div>
+    <button>View all</button>
+  </div>
+  <div class="extra">
+    <div class="extrapartA">
+        <img src="{{ url_for('static', filename='/images/dumbble.png') }}" alt="" />
+        <h2>Discover the <span style="color: #ea8930">FoodFit</span>  App Experience</h2>
+        <p>Sign up for FoodFit and start your journey to a healthier lifestyle.</p>
+    </div>
+    <div class="extrapartA">
+        <img src="{{ url_for('static', filename='/images/watch.png') }}" alt="" />
+        <h2>Get Personalized <span style="color: #ea8930">Recommendations</span></h2>
+        <p>Receive tailored suggestions for healthy recipes, workout routines, and more.</p>
+    </div>
+  </div>
 </div>
 {% endblock %}
