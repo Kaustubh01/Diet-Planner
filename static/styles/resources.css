@@ -1,0 +1,39 @@
+.contentresource{
+    display: flex;
+    flex-direction: column;
+    
+    /* justify-content: center; */
+}
+.text{
+    text-align: center;
+}
+.diets{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    display: flex;
+    border-radius: 50px;
+    padding: 10px;
+    width: 450px;
+    height: 500px;
+    background-color: #F0E1D2;
+    border: 2px solid #EE9748;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+
+.card a:hover {
+    color: white;
+}

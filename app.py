@@ -13,14 +13,20 @@ app.register_blueprint(dashboard_blueprint)
 
 @app.route('/')
 def hello():
-    images = ['image1.jpg', 'image2.jpg', 'image3.jpg']
-    return render_template('index.html', images=images)
+    return render_template('index.html')
 
 
-@app.route('/bmi')
-def bmi():
-    return render_template('bmi.html')
+@app.route('/bmicalculator')
+def dashboard():
+    return render_template('dashboard.html')
 
+@app.route('/resources')
+def resources():
+    return render_template('resources.html')
+
+@app.route('/balanceddiet')
+def balancedDiet():
+    return render_template('result.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

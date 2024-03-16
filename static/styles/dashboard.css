@@ -11,6 +11,7 @@
     width: 400px ;
     height: auto;
     border-radius: 50px;
+    background-color: #F0E1D2;
     border:  2px solid #EE9748;
     display: flex;
     flex-direction: column;
@@ -34,7 +35,7 @@ input[type=number],select {
     padding: 13px 15px 13px 15px;
     border-radius: 10px;
     border-width: 2px;
-    border-color: #E0E0E0;
+    border-color:#EA8930;
     border-style: solid;
 }
 .gender{
@@ -99,4 +100,86 @@ input[type=radio]:checked{
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
         #EE9748 0px 0px 20px 12px;
     margin: 40px 0px;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+
+}
+.predictionsdiv{
+        width: 400px;
+        align-items: center;
+        height: 633px;
+        border-radius: 50px;
+        background-color: #EE9748;
+        border: 2px solid #EE9748;
+        display: flex;
+        flex-direction: column;
+        padding: 55px 69px 55px 69px;
+        font-family: sans-serif;
+}
+.predict{
+        border-radius: 50px;
+        width: 450px;
+        background-color: #F0E1D2;
+        margin-top: 30px;
+        text-align: center;
+        font-size: 28px;
+        font-family: sans-serif;
+        font-weight: 600;
+        padding: 15px 10px;
+}
+.goal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #EA8930;
+    justify-content: space-evenly;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+.maintext{
+    color: white;
+}
+
+.sideB {
+    width: 50%;
+}
+
+.sideB button {
+    border: 0px;
+    border-radius: 10px;
+    width: 150px;
+    padding: 12px;
+    font-size: 18px;
+    font-family: sans-serif;
+    transition: all 1s ease;
+}
+
+.learn {
+    background-color: transparent;
+    color: #ea8930
+}
+.resultline{
+    color: black;
+    font-weight: 600;
+    font-size: 24px;
+}
+.image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 50px 0px;
+}
+.image a{
+    text-decoration: none;
+    color: black;
+}
+.image a:hover{
+    color: white;
 }

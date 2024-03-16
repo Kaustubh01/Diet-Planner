@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/styles/dashboard.css" />
-    <title>BMI Caluculator</title>
-  </head>
-
-  <body>
-    {% include 'nav.html' %}
+{% extends 'base.html' %} {% block header %}{% endblock %} {% block content %}
     <div class="BMIcontent">
       <form
         action="{{ url_for('dashboard.dashboard') }}"
         method="POST"
         class="form"
+        
       >
         <h1
           style="
@@ -132,5 +123,4 @@
         <button type="submit" class="calculate">Calculate</button>
       </form>
     </div>
-  </body>
-</html>
+{% endblock %}

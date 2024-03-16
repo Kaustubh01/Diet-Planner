@@ -1,48 +1,93 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../static/styles/dashboard.css" />
-    <title>Document</title>
-</head>
-<body>
-        <div class="result">
-        <h1 style="
+{% extends 'base.html' %} {% block header %}{% endblock %} {% block content %}
+    
+    <div class="content">
+      <div class="result">
+        <h1
+          style="
             text-align: center;
             font-weight: 700;
             font-size: 28px;
             line-height: 38px;
             font-family: sans-serif;
-          ">Result</h1>
+          "
+        >
+          Result
+        </h1>
         <div class="BMIcount">
-          <p style="font-weight: 700; font-size: 72px; line-height: 38px; margin: 0px; margin-top: 40px;">{{ bmi }}</p>
-          <p style="font-weight: 700; font-size: 24px; line-height: 38px;">kg/m2</p>
+          <p
+            style="
+              font-weight: 700;
+              font-size: 72px;
+              line-height: 38px;
+              margin: 0px;
+              margin-top: 40px;
+            "
+          >
+            {{ bmi }}
+          </p>
+          <p style="font-weight: 700; font-size: 24px; line-height: 38px">
+            kg/m2
+          </p>
         </div>
-        <p style="font-weight:600;font-size: 28px;">{{ health_status }}</p>
+        <p style="font-weight: 600; font-size: 28px">{{ health_status }}</p>
         <div class="record">
           <div class="values">
             <p class="data">{{ gender }}</p>
             <p class="recordlabels">Gender</p>
           </div>
-         <div class="values">
+          <div class="values">
             <p class="data">{{ age }}</p>
             <p class="recordlabels">Age</p>
-         </div>
-        <div class="values">
+          </div>
+          <div class="values">
             <p class="data">{{ height }}</p>
             <p class="recordlabels">Height</p>
-        </div>
-        <div class="values">
+          </div>
+          <div class="values">
             <p class="data">{{ weight }}</p>
             <p class="recordlabels">weight</p>
+          </div>
         </div>
+      </div>
+      <div class="predictionsdiv">
+        <h1
+          style="
+            color: white;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            font-family: sans-serif;
+          "
+        >
+          Suggested Diet
+        </h1>
+        <div class="predict">{{ predictions }}</div>
+      </div>
+    </div>
+    <div class="goal">
+      
+      <div class="sideB">
+        <div class="maintext">
+          <h1>
+            Stay Motivated with Personalized Support
+          </h1>
+          <p>
+            Receive tailored suggestions for healthy recipes, workout routines, and more.
+          </p>
+        </div>
+        <div class="buttons">
+          <button style="background-color: #ffffff; color: #EE9748">Explore</button>
+          <button class="learn" style="color: #ffffff;">Learn More ></button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="{{ url_for('static', filename='/images/result.jpg') }}" alt=""/>
+        <div style="width: 60%;">
+        <p class="resultline">
+          Top 10 Muscle-Building Exercises For Beginners
+        </p>
+        <a href="https://medium.com/@copy.kolary/the-top-10-muscle-strengthening-exercises-for-every-major-muscle-group-7c96c5f29b6e" >Read More > </a>
         </div>
       </div>
     </div>
-
-{{ predictions }}
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block header %}{% endblock %} {% block content %}
+
+<div class="contentresource">
+  <div class="text">
+    <h1>Discover the Best Diets</h1>
+    <p>
+      Keep up your good health with the insightful articles on blog. and youtube
+      videos
+    </p>
+  </div>
+  <div class="diets">
+    <div class="card">
+      <img
+        src="{{ url_for('static', filename='/images/result.jpg') }}"
+        alt=""
+      />
+      <div style="width: 70%">
+        <p class="resultline">Top 10 Muscle-Building Exercises For Beginners</p>
+        <a
+          href="https://medium.com/@copy.kolary/the-top-10-muscle-strengthening-exercises-for-every-major-muscle-group-7c96c5f29b6e"
+          >Read More >
+        </a>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+{% endblock %}
