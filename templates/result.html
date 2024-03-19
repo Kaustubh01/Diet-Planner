@@ -43,6 +43,14 @@
       </div>
     </div>
 
-{{ output }}
+ <ul>
+    {% for item in output %}
+         <li>
+                {% for key, value in item.items() %}
+                    <strong>{{ key }}:</strong> {{ value }}<br>
+                {% endfor %}
+            </li>
+    {% endfor %}
+    </ul>
 </body>
 </html>

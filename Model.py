@@ -3,6 +3,7 @@ import pandas as pd
 from pulp import *
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
+import pickle
 
 sampleData = pd.read_csv('https://raw.githubusercontent.com/imperixxl/hackjmi-2024/main/nutritionalValues.csv').drop(
     columns='VegNovVeg', axis=1)
@@ -157,13 +158,14 @@ def execModel(diet, selected_days):
                 if meal not in meal_labels:
                     print(f"\033[4m\033[3m{meal}\033[0m")  # Underline and italicize meal name
                     meal_labels.append(meal)
-                # Format the meal data
+                # Format the meal data as a dictionary
                 meal_data_formatted = meal_data[['Food Items', 'Quantity (grams)']].copy()
-                meal_data_formatted['Food Items'] = meal_data_formatted['Food Items'].apply(lambda x: x.ljust(25))
-                ufo.append(meal_data_formatted)
+                meal_data_dict = meal_data_formatted.set_index('Food Items').T.to_dict('list')
+
                 # Print the meal data
-                print(meal_data_formatted.to_string(index=False, header=False))
+                for food_item, quantity in meal_data_dict.items():
+                    ufo.append({food_item: f"{round(quantity[0],1)} grams"})
                 print("---------------------------------")
-        print(
-            "________________________________________________________________________________________________________________")
+        print("________________________________________________________________________________________________________________")
     return ufo
+
