@@ -148,13 +148,14 @@ def finalModel(weight, cals):
 def execModel(diet, selected_days):
     ufo = []
     for day in selected_days:
+        ufo.append({"day": day})
         print(f"\033[1m{day}\033[0m")  # Bold day
         print("\n")  # Add two new lines after printing the day
         meal_labels = []
         for meal in meals:
             meal_data = diet[day][meal]
             if not meal_data.empty:
-                # Add a label for the meal if it hasn't been added yet
+                ufo.append({"meal": meal})
                 if meal not in meal_labels:
                     print(f"\033[4m\033[3m{meal}\033[0m")  # Underline and italicize meal name
                     meal_labels.append(meal)

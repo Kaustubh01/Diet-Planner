@@ -17,19 +17,26 @@ def dashboard():
         weight = int(request.form['weight'])
         height = int(request.form['height'])
 
+        height_m = height / 100
+
+        # Calculate BMI
+        bmi = weight / (height_m ** 2)
+
         print(selected_days)
         diet = finalModel(weight, calories)
 
         output = execModel(diet, selected_days)
-        session['result']= output
-        return redirect(url_for('dashboard.result'))
-
-
+        session['result'] = output
+        return redirect(url_for('dashboard.result', bmi=bmi, height=height, weight=weight, gender=gender))
 
     return render_template('dashboard.html', days_of_week=days_of_week)
 
 
 @dashboard_blueprint.route('/result')
 def result():
-    result = session.get('result', [])
-    return render_template('result.html', output=result)
+    height = request.args.get('height')
+    weight = request.args.get('weight')
+    gender = request.args.get('gender')
+    bmi = round(float(request.args.get('bmi')), 2)
+    result_of_values = session.get('result', [])
+    return render_template('result.html', output=result_of_values, height=height, weight=weight, gender=gender, bmi=bmi)
