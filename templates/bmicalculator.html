@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block header %}{% endblock %} {% block content %}
     <div class="BMIcontent">
       <form
-        action="{{ url_for('dashboard.dashboard') }}"
+        action="{{ url_for('dashboard.bmicalculate') }}"
         method="POST"
         class="form"
         
@@ -17,25 +17,6 @@
         >
           BMI Calculator
         </h1>
-
-        <label
-          for="calories"
-          style="
-            font-weight: 500;
-            font-size: 22px;
-            line-height: 25px;
-            font-family: sans-serif;
-            margin-top: 30px;
-          "
-          >Calories Requirement</label
-        >
-        <input
-          type="number"
-          id="calories"
-          name="calories"
-          placeholder="Enter your daily calories requirements"
-          required
-        />
 
         <label
           for="gender"
@@ -64,29 +45,6 @@
             />
           </div>
         </div>
-
-        <label
-          for="activity_level"
-          style="
-            font-weight: 500;
-            font-size: 22px;
-            line-height: 25px;
-            font-family: sans-serif;
-            margin-top: 30px;
-            margin-bottom: 20px;
-          "
-          >Select Days:</label
-        >
-        {% for day in days_of_week %}
-          <div class="days">
-            <div>
-          {{ day }} 
-          </div>
-          <div>
-          <input type="checkbox" name="days" value="{{ day }}"> 
-          </div>
-          </div>
-        {% endfor %}
 
         <label
           for="weight"
