@@ -61,10 +61,20 @@
         >
           Suggested Diet
         </h1>
-        <div class="predict">{{ predictions }}</div>
+        <div >
+          <ul>
+            {% for item in output %}
+            <li class="predict" >
+              {% for key, value in item.items() %}
+              <strong>{{ key }}:</strong> {{ value }}<br>
+              {% endfor %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="goal">
+    <!-- <div class="goal">
       
       <div class="sideB">
         <div class="maintext">
@@ -89,20 +99,42 @@
         <a href="https://medium.com/@copy.kolary/the-top-10-muscle-strengthening-exercises-for-every-major-muscle-group-7c96c5f29b6e" >Read More > </a>
         </div>
       </div>
-    </div>
-<<<<<<< HEAD
-{% endblock %}
-=======
+    </div> -->
 
- <ul>
-    {% for item in output %}
-         <li>
-                {% for key, value in item.items() %}
-                    <strong>{{ key }}:</strong> {{ value }}<br>
-                {% endfor %}
-            </li>
-    {% endfor %}
-    </ul>
-</body>
-</html>
->>>>>>> 4b14dd67b08273df22aced0ec95971582e9c6d0a
+      <div class="workout">
+        <div class="workhead" style="width: 90%;">
+          <div class="workoutline">
+            <p>
+              Discover the Best
+              <span style="color: #ea8930">Workouts</span>
+            </p>
+          </div>
+          <div style="font-size: 24px; text-align: left">
+            Get Fit with These YouTube Videos
+          </div>
+        </div>
+        <div class="workoutimages">
+          <div style="width: 27%">
+            <img src="{{ url_for('static', filename='/images/workout1.jpg') }}" style="height: 280px; width: 450px;" alt="" />
+            <h3>7 Fitness Habits That Will Change Your Life</h3>
+            <p>Health & Fitness Habits Hacks | Daily Healthy Tips</p>
+            <a href="https://youtu.be/-_VhU5rqyko?si=sIgVCicp5v0nGBGB">Visit ↗ </a>
+          </div>
+          <div style="width: 27%">
+            <img src="{{ url_for('static', filename='/images/workout2.jpg') }}" style="height: 280px; width: 450px;" alt="" />
+            <h3>What Happens When You Start Eating Healthy?</h3>
+            <p>Discover how a balanced diet can improve health.</p>
+            <a href="https://youtu.be/3DM3_ocFy0U?si=xImEniWkDs0p5Rwd">Visit ↗ </a>
+          </div>
+          <div style="width: 27%">
+            <img <img src="{{ url_for('static', filename='/images/workout3.jpg') }}" style="height: 280px; width: 450px;"
+              alt="" />
+            <h3>The Importance of Physical Activity</h3>
+            <p>Learn how exercise can benefit body and mind.</p>
+            <a href="#">Visit ↗ </a>
+          </div>
+        </div>
+        <button>View all</button>
+      </div>
+
+{% endblock %}

@@ -112,7 +112,8 @@ input[type=radio]:checked{
 .predictionsdiv{
         width: 400px;
         align-items: center;
-        height: 633px;
+        min-height: 633px;
+        max-height: max-content;
         border-radius: 50px;
         background-color: #EE9748;
         border: 2px solid #EE9748;
@@ -127,10 +128,11 @@ input[type=radio]:checked{
         background-color: #F0E1D2;
         margin-top: 30px;
         text-align: center;
-        font-size: 28px;
+        font-size: 18px;
         font-family: sans-serif;
         font-weight: 600;
         padding: 15px 10px;
+        list-style: none;
 }
 .goal {
     display: flex;

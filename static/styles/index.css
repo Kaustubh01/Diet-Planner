@@ -118,6 +118,7 @@ width: 655px;
          display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 200px;
 }
 .workout button {
     background-color: transparent;
