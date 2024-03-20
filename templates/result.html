@@ -90,4 +90,19 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 {% endblock %}
+=======
+
+ <ul>
+    {% for item in output %}
+         <li>
+                {% for key, value in item.items() %}
+                    <strong>{{ key }}:</strong> {{ value }}<br>
+                {% endfor %}
+            </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
+>>>>>>> 4b14dd67b08273df22aced0ec95971582e9c6d0a
