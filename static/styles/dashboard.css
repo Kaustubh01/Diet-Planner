@@ -38,16 +38,22 @@ input[type=number],select {
     border-color:#EA8930;
     border-style: solid;
 }
+.days{
+    display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        /* Adjust the column width as needed */
+        gap: 0px;
+        align-items: center;
+        margin: 10px 0;
+}
 .gender{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        /* Adjust the column width as needed */
+        gap: 20px;
+        margin-top: 10px;
 }
-input[type=radio]:checked{
-    background-color: #EA8930;
-    
-}
+
 
 .calculate{
         margin-top: 40px;

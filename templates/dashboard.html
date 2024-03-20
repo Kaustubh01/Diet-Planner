@@ -21,8 +21,8 @@
         <label
           for="calories"
           style="
-            font-weight: 400;
-            font-size: 18px;
+            font-weight: 500;
+            font-size: 22px;
             line-height: 25px;
             font-family: sans-serif;
             margin-top: 30px;
@@ -40,8 +40,8 @@
         <label
           for="gender"
           style="
-            font-weight: 400;
-            font-size: 18px;
+            font-weight: 500;
+            font-size: 22px;
             line-height: 25px;
             font-family: sans-serif;
             margin-top: 30px;
@@ -68,23 +68,31 @@
         <label
           for="activity_level"
           style="
-            font-weight: 400;
-            font-size: 18px;
+            font-weight: 500;
+            font-size: 22px;
             line-height: 25px;
             font-family: sans-serif;
             margin-top: 30px;
+            margin-bottom: 20px;
           "
           >Select Days:</label
         >
         {% for day in days_of_week %}
-            <input type="checkbox" name="days" value="{{ day }}"> {{ day }}<br>
+          <div class="days">
+            <div>
+          {{ day }} 
+          </div>
+          <div>
+          <input type="checkbox" name="days" value="{{ day }}"> 
+          </div>
+          </div>
         {% endfor %}
 
         <label
           for="weight"
           style="
-            font-weight: 400;
-            font-size: 18px;
+            font-weight: 500;
+            font-size: 22px;
             line-height: 25px;
             font-family: sans-serif;
             margin-top: 30px;
@@ -101,9 +109,10 @@
         <label
           for="height"
           style="
-            font-weight: 400;
-            font-size: 18px;
+            font-weight: 500;
+            font-size: 22px;
             line-height: 25px;
+            
             font-family: sans-serif;
             margin-top: 30px;
           "
@@ -121,7 +130,7 @@
 
     </div>
 
-    <h1>Result</h1>
+    <!-- <h1>Result</h1> -->
      {% if output %}
 
     <p> {{ output[0] }}</p>
