@@ -104,7 +104,7 @@
         </p>
       </div>
     </div>
-    <button>View all</button>
+    <button ><a href="{{ url_for('resources') }}" >View all</a></button>
   </div>
   <div class="goal">
     <div>
@@ -129,7 +129,7 @@
       </div>
       <div class="buttons">
         <a href="{{ url_for('resources') }}"><button style="background-color: #ea8930; color: white">Explore</button></a>
-        <button class="learn" >Learn More ></button>
+        <a href="{{ url_for('resources') }}"><button class="learn" >Learn More ></button></a>
       </div>
     </div>
   </div>

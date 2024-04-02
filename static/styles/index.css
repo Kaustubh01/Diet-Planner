@@ -131,6 +131,18 @@ width: 655px;
     font-family: sans-serif;
     transition: all 1s ease;
 }
+.diet button a {
+text-decoration: none;
+color: #EA8930;
+}
+
+.buttons a button  {
+    cursor: pointer;
+}
+
+.diet button a:hover {  
+color: white;
+}
 .workout button:hover {
     background-color: #EA8930;
     color: white;
