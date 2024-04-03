@@ -23,6 +23,10 @@ def login():
 def signup():
     return render_template('signup.html')
 
+def count_digits(number):
+    # Convert the number to a string and calculate its length
+    return len(str(abs(number)))
+
 @login_blueprint.route('/signup-form', methods=['GET', 'POST'])
 def signup_form():
     if request.method == 'POST':
@@ -30,8 +34,10 @@ def signup_form():
         password = request.form['password']
         confirm_password = request.form['confirm-password']
         username = request.form['name']
-        phone = request.form['mobile']
+        phone = int(request.form['mobile'])
 
+        if count_digits(phone) <10:
+            return "please enter correct phone number"
         if password != confirm_password:
             return 'Password and Confirm Password do not match.'
 
