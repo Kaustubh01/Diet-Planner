@@ -31,6 +31,20 @@ def dashboard():
 
     return render_template('dashboard.html', days_of_week=days_of_week)
 
+@dashboard_blueprint.route('/bmicalcultor', methods=['GET', 'POST'])
+def bmicalculate():
+    if request.method == 'POST':
+        gender = request.form['gender']
+        weight = int(request.form['weight'])
+        height = int(request.form['height'])
+
+        height_m = height / 100
+
+        # Calculate BMI
+        bmi = round((weight / (height_m ** 2)), 2)
+        
+
+    return render_template('bmiresult.html', bmi = bmi, height=height, weight=weight, gender = gender)
 
 @dashboard_blueprint.route('/result')
 def result():

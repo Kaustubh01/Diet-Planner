@@ -21,6 +21,10 @@
 .result{
         width: 400px;
         align-items: center;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
         height: 633px;
         border-radius: 50px;
         background-color: #F0E1D2 ;

@@ -18,7 +18,7 @@ def hello():
 
 @app.route('/bmicalculator')
 def dashboard():
-    return render_template('dashboard.html')
+    return render_template('bmicalculator.html')
 
 @app.route('/resources')
 def resources():
