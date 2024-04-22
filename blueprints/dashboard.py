@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, sessio
 import pandas as pd
 from database.database import *
 import json
-from Model import execModel, finalModel
+from Model import execModel, finalModel, nutritional_calories
 
 dashboard_blueprint = Blueprint('dashboard', __name__)
 
@@ -27,7 +27,7 @@ def dashboard():
 
         output = execModel(diet, selected_days)
         session['result'] = output
-        return redirect(url_for('dashboard.result', bmi=bmi, height=height, weight=weight, gender=gender))
+        return redirect(url_for('dashboard.result', bmi=bmi, height=height, weight=weight, gender=gender, calories = calories))
 
     return render_template('dashboard.html', days_of_week=days_of_week)
 
@@ -49,8 +49,14 @@ def bmicalculate():
 @dashboard_blueprint.route('/result')
 def result():
     height = request.args.get('height')
-    weight = request.args.get('weight')
+    weight = float(request.args.get('weight'))
     gender = request.args.get('gender')
+    calories = float(request.args.get('calories'))
+    print(f'calories : {calories}')
     bmi = round(float(request.args.get('bmi')), 2)
     result_of_values = session.get('result', [])
-    return render_template('result.html', output=result_of_values, height=height, weight=weight, gender=gender, bmi=bmi)
+
+    daily_carbs = nutritional_calories(weight, calories)
+    print(daily_carbs)
+
+    return render_template('result.html', output=result_of_values, height=height, weight=weight, gender=gender, bmi=bmi, daily_carbs = daily_carbs)
