@@ -35,7 +35,7 @@
     color: white;
     border-radius: 10px;
 }
-input[type=email],[type=password],[type=text],[type=number]{
+input[type=email],[type=password],[type=text],[type=number],[type = tel] {
     padding: 13px 15px 13px 15px;
     border-radius: 10px;
     border-width: 1px;
