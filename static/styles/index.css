@@ -148,14 +148,16 @@ color: white;
     color: white;
 }
 .workoutimages {
-margin-bottom: 20px;
+    margin-bottom: 20px;
     margin-top: 50px;
+    
     display: flex;
     flex-direction: row;
 
-    justify-content: space-evenly;
+    justify-content: space-around;
     
 }
+
 .workoutline {
     font-weight: 700;
     font-size: 52px;

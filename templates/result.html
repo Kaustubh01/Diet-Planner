@@ -31,26 +31,38 @@
         </div>
         <p style="font-weight: 600; font-size: 28px">{{ health_status }}</p>
         <div class="record">
-          <div class="values">
-            <p class="data">{{ gender }}</p>
-            <p class="recordlabels">Gender</p>
+          <div class="top">
+            <div class="values">
+              <p class="data">{{ gender }}</p>
+              <p class="recordlabels">Gender</p>
+            </div>
+            <div class="values">
+              <p class="data">{{ height }}</p>
+              <p class="recordlabels">Height</p>
+            </div>
+            <div class="values">
+              <p class="data">{{ weight }}</p>
+              <p class="recordlabels">weight</p>
+            </div>
           </div>
-          <div class="values">
-            <p class="data">{{ height }}</p>
-            <p class="recordlabels">Height</p>
-          </div>
-          <div class="values">
-            <p class="data">{{ weight }}</p>
-            <p class="recordlabels">weight</p>
-          </div>
-          <div class="daily-requirements">
-          <div class="values">
-            <p class="recordlabels">Protiens:</p> <p class="data">{{ daily_carbs['Protein calories'] }}g</p>
-            <p class="recordlabels">Carbohydrates: </p> <p class="data">{{ daily_carbs['Carbohydrate calories'] }}g</p>
-            <p class="recordlabels">Fats: </p> <p class="data">{{ daily_carbs['Fat calories'] }}g</p>
-  
-          </div>
-        </div>
+          
+            <div class="daily-requirements">
+              <div class="faltu">
+                <div class="values">
+                  <p class="data">{{ daily_carbs['Protein calories'] }}g</p>
+                  <p class="recordlabels">Protiens:</p> 
+                </div>
+                <div class="values">
+                  <p class="data">{{ daily_carbs['Carbohydrate calories'] }}g</p>
+                  <p class="recordlabels">Carbohydrates: </p> 
+                </div>
+                <div class="values">
+                  <p class="data">{{ daily_carbs['Fat calories'] }}g</p>
+                  <p class="recordlabels">Fats: </p> 
+                </div>
+              </div>
+            </div>
+          
         </div>
       </div>
       <div class="predictionsdiv">
@@ -120,7 +132,7 @@
           </div>
         </div>
         <div class="workoutimages">
-          <div style="width: 27%">
+          <div style="width: 27%; margin-left: 20px">
             <img src="{{ url_for('static', filename='/images/workout1.jpg') }}" style="height: 280px; width: 450px;" alt="" />
             <h3>7 Fitness Habits That Will Change Your Life</h3>
             <p>Health & Fitness Habits Hacks | Daily Healthy Tips</p>
@@ -137,10 +149,10 @@
               alt="" />
             <h3>The Importance of Physical Activity</h3>
             <p>Learn how exercise can benefit body and mind.</p>
-            <a href="#">Visit ↗ </a>
+            <a href="https://youtu.be/rBUjOY12gJA?si=ki9XSgRRJSIzxAbP">Visit ↗ </a>
           </div>
         </div>
-        <button>View all</button>
+        <button><a href="{{url_for("resources")}}" style="text-decoration: none; color: black">View all</a></button>
       </div>
 
 {% endblock %}
