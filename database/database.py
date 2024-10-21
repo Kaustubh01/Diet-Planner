@@ -5,8 +5,7 @@ from flask_pymongo import MongoClient
 def get_db():
     if 'db' not in g:
         # Replace 'your_connection_string' with your MongoDB Atlas connection string
-        client = MongoClient('mongodb+srv://admin:pJAehpe7HyaN7klL@cluster0.r4svnil.mongodb.net/?retryWrites=true&w'
-                             '=majority')
+        client = MongoClient('mongodb+srv://admin:dietdatabase@cluster0.r4svnil.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
         g.db = client['diet']
 
     return g.db
